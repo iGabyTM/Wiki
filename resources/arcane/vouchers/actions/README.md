@@ -30,7 +30,7 @@ Each action has its own unique identifier. The id is also case-insensitive, mean
   * [\[chat\] \<message>](./#chat)
   * [\[message\] \<message>](./#message)
 * Other
-  * \[sound] \<sound>
+  * [\[sound\] \<sound>](./#undefined)
 
 #### Actions with dependencies
 
@@ -62,6 +62,10 @@ Command
 {% tab title="Arguments" %}
 **\<command>**: String, the command to execute
 {% endtab %}
+
+{% tab title="Player" %}
+`[player] kit Daily` - make the player run `/kit daily   d`
+{% endtab %}
 {% endtabs %}
 
 {% hint style="info" %}
@@ -73,6 +77,12 @@ Economy
 {% tabs %}
 {% tab title="Arguments" %}
 **\<amount>(L):** Integer, amount of exp to add. By appending an `L` after, levels of exp will be given instead of points
+{% endtab %}
+
+{% tab title="Untitled" %}
+`[addexp] 100` - give 100 EXP points to the player
+
+`[addexp] 100L` - give 100 levels of EXP to the player
 {% endtab %}
 {% endtabs %}
 
@@ -97,8 +107,12 @@ A format similar to EssentialsX's is used.
 * **model**: Integer, the custom model data of this item (1.14.4+)
 * **nbt:** String, a JSON string representing item's NBT, some escaping should be done, mostly for quotes. This argument must be the last one since it takes everything that's after `nbt:` as value
 
-For enchantments simply use `Enchantment:level` \
+For enchantments simply use `Enchantment:level`\
 For `name` and `lore` , if you want to use `_` and `|` you will have to escape them by adding a `\` before.
+{% endtab %}
+
+{% tab title="Examples" %}
+`[item] LEATHER_CHESTPLATE 1 lore:<red>What's</red>_<blue>up?</blue>` - a leather chestplate with a lore saying <mark style="color:red;">What's</mark> <mark style="color:blue;">up?</mark>
 {% endtab %}
 {% endtabs %}
 
@@ -124,6 +138,10 @@ Message
 
 **progress**: Float, the progress of the bar (default: [MAX\_PROGRESS](https://jd.adventure.kyori.net/api/4.9.3/constant-values.html#net.kyori.adventure.bossbar.BossBar.MAX\_PROGRESS))
 {% endtab %}
+
+{% tab title="Examples" %}
+`{color=BLUE progress=0.5 display=200} [bossbar] <green>Hey</green>` - a blue bar that will stay on the screen for 10 seconds, with 50% progress and a green text saying <mark style="color:green;">Hey</mark>&#x20;
+{% endtab %}
 {% endtabs %}
 
 #### \[chat] - make the player send a message in chat <a href="#chat" id="chat"></a>
@@ -132,16 +150,20 @@ Message
 {% tab title="Arguments" %}
 **message**: String, the message that will be sent
 {% endtab %}
+
+{% tab title="Examples" %}
+`[chat] <yellow>Hello everyone, my name is %player_name%!<yellow>` - a yellow message saying <mark style="color:yellow;">Hello everyone, my name is \<name>!</mark>
+{% endtab %}
 {% endtabs %}
 
 #### \[message] - send a message to the player <a href="#message" id="message"></a>
 
 {% tabs %}
-{% tab title="First Tab" %}
+{% tab title="Arguments" %}
 **message**: String, the message that will be sent.
 {% endtab %}
 
-{% tab title="Second Tab" %}
+{% tab title="Properties" %}
 **broadcast:** see [Properties/Broadcast](properties.md#broadcast) (default: none)
 
 **type**: String, the type of the message (ACTION\_BAR, CHAT, TITLE) (default: `CHAT`).\
@@ -152,11 +174,84 @@ Message
 * **fadeOut:** Ticks, the time the title will fade-out (default: 20 or 1 second)
 * **stay**: Ticks, the time the title will stay (default: 70 or 3.5 seconds)
 
-
-
 For `TITLE`, use `[n]` to separate the title from subtitle (`This is the title[n]And this is the subtitle`)
+{% endtab %}
+
+{% tab title="Examples" %}
+`{type=TITLE stay=100] [message] <blue>You have won</blue>[n]<dark_green>$</dark_green><green>50,000</green>`- a title that will stay on the screen for 5 seconds saying `You have won` `$50,000`
+
+`[message] <red>Hey %player_name%, how are you?<red>` - a red chat message saying <mark style="color:red;">Hey \<name>, how are you?</mark>
 {% endtab %}
 {% endtabs %}
 
+{% hint style="info" %}
+Other
+{% endhint %}
 
+#### \[sound] - play a sound to the player
+
+{% tabs %}
+{% tab title="Arguments" %}
+**sound**: NamespacedKey, the key of the sound
+{% endtab %}
+
+{% tab title="Properties" %}
+**broadcast**: see [Properties/Broadcast](properties.md#broadcast) (default: none)
+
+**pitch**: Float, the pitch of the sound (default: `0`)
+
+**source**: String, the name of a [Source](https://jd.adventure.kyori.net/api/4.9.3/net/kyori/adventure/sound/Sound.Source.html#enum.constant.summary) (default: [MASTER](https://jd.adventure.kyori.net/api/4.9.3/net/kyori/adventure/sound/Sound.Source.html#MASTER))
+
+**volume**: Float, the volume of the sound (default: `0`)
+{% endtab %}
+
+{% tab title="examples" %}
+`{source=AMBIENT} [sound] minecraft:ambient.cave` - play the sound from `AMBIENT` source
+
+`[sound] custom:sound_name` - play a custom sound
+{% endtab %}
+{% endtabs %}
+
+### Actions with dependencies
+
+{% hint style="info" %}
+Vault
+{% endhint %}
+
+#### \[addmoney] - add money to player's balance
+
+<mark style="color:green;">An economy plugin is required to use this action.</mark>
+
+{% tabs %}
+{% tab title="Arguments" %}
+**amount**: Double, the amount of money to give
+{% endtab %}
+
+{% tab title="Examples" %}
+`[addmoney] 125.50`
+{% endtab %}
+{% endtabs %}
+
+#### \[permission] add or remove a permission to the player
+
+<mark style="color:green;">A permissions plugin is required to use this action.</mark>
+
+{% tabs %}
+{% tab title="Arguments" %}
+**Required**:
+
+* **action:** String, the name of the action to perform, `ADD` or `REMOVE`
+* **permission**: String, the permission node
+
+**Optional**:
+
+* &#x20;**world**: String, the name of the world where the permission will be added / removed (default: player's world)
+{% endtab %}
+
+{% tab title="Examples" %}
+`[permission] ADD some.permission world_nether` - add the permission only on world\_nether
+
+`[permission] REMOVE some.permission` - remove the permission global
+{% endtab %}
+{% endtabs %}
 
