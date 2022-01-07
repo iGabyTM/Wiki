@@ -27,8 +27,8 @@ Each action has its own unique identifier. The id is also case-insensitive, mean
   * [\[item\] \<material>(:damage) \<amount> (args...)](./#item)
 * Message
   * [\[bossbar\] \<message>](./#bossbar)
-  * [\[chat\] \<message>](./#undefined)
-  * [\[message\] \<message>](./#undefined)
+  * [\[chat\] \<message>](./#chat)
+  * [\[message\] \<message>](./#message)
 * Other
   * \[sound] \<sound>
 
