@@ -34,7 +34,7 @@ Each action has its own unique identifier. The id is also case-insensitive, mean
 #### Actions with dependencies
 
 * Crates
-  * [\[givecratereloadedkey\] \<crate> (amount)](./givecratereloadedkey)
+  * [\[givecratereloadedkey\] \<crate> (amount)](./#givecratereloadedkey)
 * [Vault](https://www.spigotmc.org/resources/vault.34315/)
   * [\[addmoney\] \<amount>](./#addmoney)
   * [\[permission\] \<ADD/REMOVE> \<permission.node> (world)](./#permission)
