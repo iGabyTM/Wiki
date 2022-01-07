@@ -6,8 +6,7 @@ Starting with v2.0.0 the format for actions was changed to the following `{`[`pr
 
 ### Properties
 
-A set of `key=value` options separated by space. All actions have these properties by default.\
-Read more about properties on their own page. 👇
+A set of `key=value` options separated by space. Read more about properties on their own page. 👇
 
 {% content-ref url="properties.md" %}
 [properties.md](properties.md)
@@ -54,17 +53,21 @@ Command
 {% tab title="Arguments" %}
 **\<command>**: String, the command to execute
 {% endtab %}
+
+{% tab title="Untitled" %}
+`[console] kill %player_name`   - make the console run `/kill <name>`
+{% endtab %}
 {% endtabs %}
 
 #### \[player] - execute a command as the player that is using the voucher <a href="#player" id="player"></a>
 
 {% tabs %}
 {% tab title="Arguments" %}
-**\<command>**: String, the command to execute
+**\<command>**: String, the command to execute (the slash is not required, unless the command has two or more)
 {% endtab %}
 
-{% tab title="Player" %}
-`[player] kit Daily` - make the player run `/kit daily   d`
+{% tab title="Examples" %}
+`[player] kit Daily` - make the player run `/kit Daily`
 {% endtab %}
 {% endtabs %}
 
