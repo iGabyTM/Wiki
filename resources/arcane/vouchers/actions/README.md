@@ -29,15 +29,15 @@ Each action has its own unique identifier. The id is also case-insensitive, mean
   * [\[chat\] \<message>](./#chat)
   * [\[message\] \<message>](./#message)
 * Other
-  * [\[sound\] \<sound>](./#undefined)
+  * [\[sound\] \<sound>](./#sound)
 
 #### Actions with dependencies
 
 * Crates
-  * \[givecratereloadedkey] \<crate> (amount)
+  * [\[givecratereloadedkey\] \<crate> (amount)](./givecratereloadedkey)
 * [Vault](https://www.spigotmc.org/resources/vault.34315/)
-  * \[addmoney] \<amount>
-  * \[permission] \<ADD/REMOVE> \<permission.node> (world)
+  * [\[addmoney\] \<amount>](./#addmoney)
+  * [\[permission\] \<ADD/REMOVE> \<permission.node> (world)](./#permission)
 
 ## Available actions
 
@@ -191,7 +191,7 @@ For `TITLE`, use `[n]` to separate the title from subtitle (`This is the title[n
 Other
 {% endhint %}
 
-#### \[sound] - play a sound to the player
+#### \[sound] - play a sound to the player <a href="#sound" id="sound"></a>
 
 {% tabs %}
 {% tab title="Arguments" %}
@@ -221,7 +221,7 @@ Other
 Vault
 {% endhint %}
 
-#### \[addmoney] - add money to player's balance
+#### \[addmoney] - add money to player's balance <a href="#addmoney" id="addmoney"></a>
 
 <mark style="color:green;">An economy plugin is required to use this action.</mark>
 
@@ -235,7 +235,7 @@ Vault
 {% endtab %}
 {% endtabs %}
 
-#### \[permission] add or remove a permission to the player
+#### \[permission] add or remove a permission to the player <a href="#permission" id="permission"></a>
 
 <mark style="color:green;">A permissions plugin is required to use this action.</mark>
 
