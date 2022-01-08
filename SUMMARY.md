@@ -18,4 +18,4 @@
 * [⛏ TokenEnchant](resources/tokenenchant/README.md)
   * [⬆ TEUpgrades](resources/tokenenchant/teupgrades.md)
 * [🔴 Other](resources/other/README.md)
-  * [👷♂ 👷♂ 👷♂ 👷♂ GUIHelper](resources/other/guihelper.md)
+  * [👷♂ GUIHelper](resources/other/guihelper.md)
