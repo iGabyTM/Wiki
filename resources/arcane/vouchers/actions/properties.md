@@ -1,6 +1,8 @@
 # Properties
 
-## General properties
+{% hint style="info" %}
+## Generic properties
+{% endhint %}
 
 These properties are available for all actions.
 
@@ -27,7 +29,9 @@ Format: `permission=<PermissionMode>:<permission>`
   * REMOVE: Same as REQUIRE but the permission is removed after the first execution
 * **\<permission>**: String, a permission node
 
+{% hint style="info" %}
 ## Specific properties
+{% endhint %}
 
 These properties are available only for certain actions.
 
