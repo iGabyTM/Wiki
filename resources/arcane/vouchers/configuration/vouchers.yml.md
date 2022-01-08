@@ -1,7 +1,3 @@
----
-description: Vouchers configuration for v2.0.0
----
-
 # vouchers.yml
 
 ## Format
@@ -153,7 +149,6 @@ vouchers:
   * [Long](https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html)
   * [Short](https://docs.oracle.com/javase/8/docs/api/java/lang/Short.html)
   * [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)
-* [MiniMessage](https://docs.adventure.kyori.net/minimessage)
 * Spigot (latest)
   * [DyeColor](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/DyeColor.html#enum-constant-summary)
   * [Enchantment](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/enchantments/Enchantment.html#field-summary)

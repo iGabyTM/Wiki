@@ -11,6 +11,7 @@
     * [Configuration](resources/arcane/vouchers/configuration/README.md)
       * [config.yml](resources/readme/vouchers/configuration/config.yml.md)
       * [vouchers.yml](resources/arcane/vouchers/configuration/vouchers.yml.md)
+      * [vouchers-nbt.json](resources/readme/vouchers/configuration/vouchers-nbt.json.md)
 * [⚡ Master](resources/master.md)
 * [⛏ TokenEnchant](resources/tokenenchant/README.md)
   * [⬆ TEUpgrades](resources/tokenenchant/teupgrades.md)
