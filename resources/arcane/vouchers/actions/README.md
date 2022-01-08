@@ -29,6 +29,7 @@ Each action has its own unique identifier. The id is also case-insensitive, mean
   * [\[chat\] \<message>](./#chat)
   * [\[message\] \<message>](./#message)
 * Other
+  * [\[data\] \<key> \<value>](./#undefined)
   * [\[sound\] \<sound>](./#sound)
 
 #### Actions with dependencies
@@ -44,7 +45,7 @@ Each action has its own unique identifier. The id is also case-insensitive, mean
 ### Default actions
 
 {% hint style="info" %}
-Command
+<mark style="color:blue;">**Commands**</mark>
 {% endhint %}
 
 #### \[console] - execute a command from [console](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/command/ConsoleCommandSender.html) <a href="#console" id="console"></a>
@@ -55,7 +56,7 @@ Command
 {% endtab %}
 
 {% tab title="Untitled" %}
-`[console] kill %player_name`   - make the console run `/kill <name>`
+`[console] kill %player_name` - make the console run `/kill <name>`
 {% endtab %}
 {% endtabs %}
 
@@ -72,7 +73,7 @@ Command
 {% endtabs %}
 
 {% hint style="info" %}
-Economy
+<mark style="color:blue;">**Economy**</mark>
 {% endhint %}
 
 #### \[addexp] - give to the player an amount of EXP <a href="#addexp" id="addexp"></a>
@@ -120,7 +121,7 @@ For `name` and `lore` , if you want to use `_` and `|` you will have to escape t
 {% endtabs %}
 
 {% hint style="info" %}
-Message
+<mark style="color:blue;">**Message**</mark>
 {% endhint %}
 
 #### \[bossbar] - display a boss bar on player's screen <a href="#bossbar" id="bossbar"></a>
@@ -143,7 +144,7 @@ Message
 {% endtab %}
 
 {% tab title="Examples" %}
-`{color=BLUE progress=0.5 display=200} [bossbar] <green>Hey</green>` - a blue bar that will stay on the screen for 10 seconds, with 50% progress and a green text saying <mark style="color:green;">Hey</mark>&#x20;
+`{color=BLUE progress=0.5 display=200} [bossbar] <green>Hey</green>` - a blue bar that will stay on the screen for 10 seconds, with 50% progress and a green text saying <mark style="color:green;">Hey</mark>
 {% endtab %}
 {% endtabs %}
 
@@ -188,8 +189,25 @@ For `TITLE`, use `[n]` to separate the title from subtitle (`This is the title[n
 {% endtabs %}
 
 {% hint style="info" %}
-Other
+<mark style="color:blue;">**Other**</mark>
 {% endhint %}
+
+#### \[data] - store a value that can be reused on the next actions <a href="#data" id="data"></a>
+
+{% tabs %}
+{% tab title="Arguments" %}
+**key**: String, the key of the value, must not contain spaces
+
+**value**: Anything, the value
+{% endtab %}
+
+{% tab title="Examples" %}
+`[data] %random% randomL:{100,200}`\
+`[addmoney] %random%`\
+`[message] You have received $%amount%`\
+Generate a random number and use it to give money and inform the player how much they got.
+{% endtab %}
+{% endtabs %}
 
 #### \[sound] - play a sound to the player <a href="#sound" id="sound"></a>
 
@@ -208,7 +226,7 @@ Other
 **volume**: Float, the volume of the sound (default: `0`)
 {% endtab %}
 
-{% tab title="examples" %}
+{% tab title="Examples" %}
 `{source=AMBIENT} [sound] minecraft:ambient.cave` - play the sound from `AMBIENT` source
 
 `[sound] custom:sound_name` - play a custom sound
@@ -218,7 +236,7 @@ Other
 ### Actions with dependencies
 
 {% hint style="info" %}
-Vault
+<mark style="color:blue;">**Vault**</mark>
 {% endhint %}
 
 #### \[addmoney] - add money to player's balance <a href="#addmoney" id="addmoney"></a>
@@ -248,7 +266,7 @@ Vault
 
 **Optional**:
 
-* &#x20;**world**: String, the name of the world where the permission will be added / removed (default: player's world)
+* **world**: String, the name of the world where the permission will be added / removed (default: player's world)
 {% endtab %}
 
 {% tab title="Examples" %}
@@ -257,4 +275,3 @@ Vault
 `[permission] REMOVE some.permission` - remove the permission global
 {% endtab %}
 {% endtabs %}
-
