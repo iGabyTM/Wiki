@@ -55,7 +55,11 @@ Each action has its own unique identifier. The id is also case-insensitive, mean
 **\<command>**: String, the command to execute
 {% endtab %}
 
-{% tab title="Untitled" %}
+{% tab title="Properties" %}
+
+{% endtab %}
+
+{% tab title="Examples" %}
 `[console] kill %player_name` - make the console run `/kill <name>`
 {% endtab %}
 {% endtabs %}
@@ -65,6 +69,10 @@ Each action has its own unique identifier. The id is also case-insensitive, mean
 {% tabs %}
 {% tab title="Arguments" %}
 **\<command>**: String, the command to execute (the slash is not required, unless the command has two or more)
+{% endtab %}
+
+{% tab title="Properties" %}
+
 {% endtab %}
 
 {% tab title="Examples" %}
@@ -83,7 +91,11 @@ Each action has its own unique identifier. The id is also case-insensitive, mean
 **\<amount>(L):** Integer, amount of exp to add. By appending an `L` after, levels of exp will be given instead of points
 {% endtab %}
 
-{% tab title="Untitled" %}
+{% tab title="Properties" %}
+
+{% endtab %}
+
+{% tab title="Examples" %}
 `[addexp] 100` - give 100 EXP points to the player
 
 `[addexp] 100L` - give 100 levels of EXP to the player
@@ -113,6 +125,10 @@ A format similar to EssentialsX's is used.
 
 For enchantments simply use `Enchantment:level`\
 For `name` and `lore` , if you want to use `_` and `|` you will have to escape them by adding a `\` before.
+{% endtab %}
+
+{% tab title="Properties" %}
+
 {% endtab %}
 
 {% tab title="Examples" %}
@@ -153,6 +169,10 @@ For `name` and `lore` , if you want to use `_` and `|` you will have to escape t
 {% tabs %}
 {% tab title="Arguments" %}
 **message**: String, the message that will be sent
+{% endtab %}
+
+{% tab title="Properties" %}
+
 {% endtab %}
 
 {% tab title="Examples" %}
@@ -199,6 +219,10 @@ For `TITLE`, use `[n]` to separate the title from subtitle (`This is the title[n
 **key**: String, the key of the value, must not contain spaces
 
 **value**: Anything, the value
+{% endtab %}
+
+{% tab title="Properties" %}
+
 {% endtab %}
 
 {% tab title="Examples" %}
@@ -248,6 +272,10 @@ Generate a random number and use it to give money and inform the player how much
 **amount**: Double, the amount of money to give
 {% endtab %}
 
+{% tab title="Properties" %}
+
+{% endtab %}
+
 {% tab title="Examples" %}
 `[addmoney] 125.50`
 {% endtab %}
@@ -267,6 +295,10 @@ Generate a random number and use it to give money and inform the player how much
 **Optional**:
 
 * **world**: String, the name of the world where the permission will be added / removed (default: player's world)
+{% endtab %}
+
+{% tab title="Properties" %}
+
 {% endtab %}
 
 {% tab title="Examples" %}
