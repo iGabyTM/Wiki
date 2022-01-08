@@ -9,6 +9,7 @@
       * [Properties](resources/arcane/vouchers/actions/properties.md)
       * [Tags](resources/readme/vouchers/actions/tags.md)
     * [Configuration](resources/arcane/vouchers/configuration/README.md)
+      * [config.yml](resources/readme/vouchers/configuration/config.yml.md)
       * [vouchers.yml](resources/arcane/vouchers/configuration/vouchers.yml.md)
 * [⚡ Master](resources/master.md)
 * [⛏ TokenEnchant](resources/tokenenchant/README.md)
