@@ -38,7 +38,7 @@ These properties are available only for certain actions.
 ### Broadcast
 
 Broadcast the action to certain players.\
-Actions: \[bossbar], \[message], \[sound]\
+Actions: [\[bossbar\]](./#bossbar), [\[message\]](./#message), [\[sound\]](./#sound)\
 **Format:** `broadcast=<condition>:(value),<condition>:(value)...` or `broadcast=*` to broadcast to all players with no exceptions
 
 * `permission:<permission>`: Broadcast to players with a certain permission
