@@ -29,7 +29,7 @@ Each action has its own unique identifier. The id is also case-insensitive, mean
   * [\[chat\] \<message>](./#chat)
   * [\[message\] \<message>](./#message)
 * Other
-  * [\[data\] \<key> \<value>](./#undefined)
+  * [\[data\] \<key> \<value>](./#data)
   * [\[sound\] \<sound>](./#sound)
 
 #### Actions with dependencies
