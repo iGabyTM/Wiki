@@ -54,6 +54,12 @@ vouchers:
         #
         redeem: Message # default: none
       #
+      # Sounds played when the voucher is received or redeemed
+      #
+      sounds:
+        receive: SoundObject # default: none
+        redeem: SoundObject # default: none
+      #
       # Make the voucher usable only by the player who received it
       #
       bindToReceiver:
@@ -62,6 +68,7 @@ vouchers:
         # {player} - the name of the player who can redeem the voucher
         #
         message: Message # default: none
+        sound: SoundObject # default: none
       #
       # Whether multiple vouchers can be redeem at one time
       #
@@ -83,6 +90,7 @@ vouchers:
         # {left} - the time left
         #
         message: Message # default: none
+        sound: SoundObject # default: none
       #
       # Limit how many times a voucher can be used by a player or global
       #
@@ -91,6 +99,7 @@ vouchers:
         type: LimitType # default: NONE
         limit: Long # default: MAX
         message: Message # default: none
+        sound: SoundObject # default: none
       #
       # Allow or disallow players to use this voucher based on their permissions
       #
@@ -101,12 +110,14 @@ vouchers:
         blacklist:
           list: List<String> # default: emty
           message: Message # default: none
+          sound: SoundObject # default: none
         #
         # Only players with one of these permissions can use this voucher
         #
         whitelist:
           list: List<String> # default: emty
           message: Message # default: none
+          sound: SoundObject # default: none
       #
       # REQUIRE WORLDGUARD 6.X.X or 7.X.X https://dev.bukkit.org/projects/worldguard
       # Allow or disallow players to use this voucher based on the region they
@@ -119,12 +130,14 @@ vouchers:
         blacklist:
           list: List<String> # default: emty
           message: Message # default: none
+          sound: SoundObject # default: none
         #
         # Only players that are in any of these regions can use this voucher
         #
         whitelist:
           list: List<String> # default: emty
           message: Message # default: none
+          sound: SoundObject # default: none
       #
       # Allow or disallow players to use this voucher based on their world
       #
@@ -135,13 +148,14 @@ vouchers:
         blacklist:
           list: List<String> # default: emty
           message: Message # default: none
+          sound: SoundObject # default: none
         #
         # Only players that are in any of these worlds can use this voucher
         #
         whitelist:
           list: List<String> # default: emty
           message: Message # default: none
-      
+          sound: SoundObject # default: none
 ```
 {% endcode %}
 
@@ -189,6 +203,21 @@ Format: `PatternType;DyeColor`
 
 * **PatternType**: String, the name of a [PatternType](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/block/banner/PatternType.html#enum-constant-summary) (`CREEPER`)
 * **DyeColor**: String, the name of a [DyeColor](vouchers.yml.md#format) (`RED`)
+
+#### SoundObject
+
+```yaml
+<section-name>:
+  sound: (1) # Required
+  source: (2) # Optional | default: MASTER
+  volume: (3) # Optional | default: 1
+  pitch: (4) # Optional | default: 1
+```
+
+1. String, the name of a sound ('[namespace:path](https://minecraft.fandom.com/wiki/Resource\_location)' or just 'path' if the namespace is 'minecraft'), example: `minecraft:block.note_block.pling` or `block.note_block.pling`
+2. String, the name of a sound [Source](https://jd.adventure.kyori.net/api/4.9.3/net/kyori/adventure/sound/Sound.Source.html#enum.constant.summary), example: `MASTER`
+3. Float, the volume of the sound, example: `0.25`
+4. Float, the pitch of the sound, example: `1.50`
 
 #### TextureString
 
