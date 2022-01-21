@@ -177,7 +177,7 @@ vouchers:
 
 #### ColorString
 
-Format: `<red>,<green>,<blue>`
+Format: `<red>,<green>,<blue>` or `RRGGBB` ([HEX](https://htmlcolorcodes.com/color-picker/), without **#**)
 
 #### **EnchantmentString**
 
