@@ -2,17 +2,13 @@
 description: From here you can add custom NBT tags to vouchers
 ---
 
-# vouchers-nbt.json
+# vouchers-nbt.txt
 
 ## Format
 
-{% code title="vouchers-nbt.json" %}
-```json
-{
-    "voucher-id": {
-        // JSON here
-    }
-}
+{% code title="vouchers-nbt.txt" %}
+```
+voucher-id {SNBT here}
 ```
 {% endcode %}
 
@@ -20,14 +16,8 @@ description: From here you can add custom NBT tags to vouchers
 
 A colored leather item
 
-```json
-{
-    "voucher-id": {
-        "display": {
-            "color": 14574937
-        }
-    }
-}
+```
+voucher-id {display:{color:14574937}}
 ```
 
 ## Resources
