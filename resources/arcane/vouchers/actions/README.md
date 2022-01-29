@@ -30,6 +30,7 @@ Each action has its own unique identifier. The id is also case-insensitive, mean
   * [\[message\] \<message>](./#message)
 * Other
   * [\[data\] \<key> \<value>](./#data)
+  * \[effect] \<effect> \<duration> (amplifier)
   * [\[sound\] \<sound>](./#sound)
 
 #### Actions with dependencies
@@ -230,6 +231,33 @@ For `TITLE`, use `[n]` to separate the title from subtitle (`This is the title[n
 `[addmoney] %random%`\
 `[message] You have received $%amount%`\
 Generate a random number and use it to give money and inform the player how much they got.
+{% endtab %}
+{% endtabs %}
+
+#### \[effect] - give a potion effect to the player
+
+{% tabs %}
+{% tab title="Arguments" %}
+
+{% endtab %}
+
+{% tab title="Properties" %}
+**Universal**: (available on all game versions)
+
+* **ambient:** Boolean, makes potion effect produce more, translucent, particles (default: `true`)
+* **particles**: Boolean, whether the effect has particles (default: `true`)
+
+**1.9 - 1.12.2**:
+
+* **color**: [ColorString](../configuration/vouchers.yml.md#colorstring), the color of the particles (default: none)
+
+**1.13+**:
+
+* **icon**: Boolean, whether the icon of the effect will be displayed (default: `true`)
+{% endtab %}
+
+{% tab title="Examples" %}
+d
 {% endtab %}
 {% endtabs %}
 
