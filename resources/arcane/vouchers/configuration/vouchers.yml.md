@@ -203,7 +203,7 @@ Format: `Type;<message>` or `<message>` and CHAT will be the default `Type`
 
 Format: `regex:<expression>` for [RegEx ](https://www.w3schools.com/java/java\_regex.asp)or just a normal String
 
-Example: Allow the voucher to be used at `spawn` or on a "player world", same thing applies for permissions or regions.
+Example: Allow the voucher to be used at `spawn` or on a "player world", same thing applies for regions.
 
 ```yaml
 worlds:
