@@ -170,6 +170,7 @@ vouchers:
 * [MiniMessage](https://docs.adventure.kyori.net/minimessage)
 * [RegEx](https://www.w3schools.com/java/java\_regex.asp)
 * Spigot (latest)
+  * [Color](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Color.html#field-summary)
   * [DyeColor](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/DyeColor.html#enum-constant-summary)
   * [Enchantment](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/enchantments/Enchantment.html#field-summary)
   * [ItemFlag](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/ItemFlag.html#enum-constant-summary)
@@ -178,7 +179,7 @@ vouchers:
 
 #### ColorString
 
-Format: `<red>,<green>,<blue>` or `RRGGBB` ([HEX](https://htmlcolorcodes.com/color-picker/), without **#**)
+Format: `<red>,<green>,<blue>` (`255,000,000`), `RRGGBB` (`FF0000` [HEX](https://htmlcolorcodes.com/color-picker/)) or the name of a [Color](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Color.html#field-summary) (RED)
 
 #### **EnchantmentString**
 
