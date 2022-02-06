@@ -108,14 +108,14 @@ vouchers:
         # Players with one of thes permissions can't use this voucher
         #
         blacklist:
-          list: List<String> # default: emty
+          list: List<Option> # default: emty
           message: Message # default: none
           sound: SoundObject # default: none
         #
         # Only players with one of these permissions can use this voucher
         #
         whitelist:
-          list: List<String> # default: emty
+          list: List<Option> # default: emty
           message: Message # default: none
           sound: SoundObject # default: none
       #
@@ -128,14 +128,14 @@ vouchers:
         # Players that are in any of these regions can't use this voucher
         #
         blacklist:
-          list: List<String> # default: emty
+          list: List<Option> # default: emty
           message: Message # default: none
           sound: SoundObject # default: none
         #
         # Only players that are in any of these regions can use this voucher
         #
         whitelist:
-          list: List<String> # default: emty
+          list: List<Option> # default: emty
           message: Message # default: none
           sound: SoundObject # default: none
       #
@@ -146,14 +146,14 @@ vouchers:
         # Players that are in any of these worlds can't use this voucher
         #
         blacklist:
-          list: List<String> # default: emty
+          list: List<Option> # default: emty
           message: Message # default: none
           sound: SoundObject # default: none
         #
         # Only players that are in any of these worlds can use this voucher
         #
         whitelist:
-          list: List<String> # default: emty
+          list: List<Option> # default: emty
           message: Message # default: none
           sound: SoundObject # default: none
 ```
@@ -168,6 +168,7 @@ vouchers:
   * [Short](https://docs.oracle.com/javase/8/docs/api/java/lang/Short.html)
   * [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)
 * [MiniMessage](https://docs.adventure.kyori.net/minimessage)
+* [RegEx](https://www.w3schools.com/java/java\_regex.asp)
 * Spigot (latest)
   * [DyeColor](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/DyeColor.html#enum-constant-summary)
   * [Enchantment](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/enchantments/Enchantment.html#field-summary)
@@ -196,6 +197,24 @@ Format: `Type;<message>` or `<message>` and CHAT will be the default `Type`
 
 * **Type**: ACTION\_BAR, CHAT, TITLE
 * **\<message>**: String, the actual message that will be sent, use `[n]` for TITLE to separate the title from subtitle
+
+#### Option
+
+Format: `regex:<expression>` for [RegEx ](https://www.w3schools.com/java/java\_regex.asp)or just a normal String
+
+Example: Allow the voucher to be used at `spawn` or on a "player world", same thing applies for permissions or regions.
+
+```yaml
+worlds:
+  whitelist:
+    list:
+      # When using normal Strings, you can also use %args% but your
+      # String must be 1:1 with the world name (e.g. 'Spawn' is not
+      # the same as 'spawn')
+      - spawn
+      # This will match all worlds that start with 'player_world-'
+      - regex:player_world-.+
+```
 
 #### PatternString
 
