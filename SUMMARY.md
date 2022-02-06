@@ -10,6 +10,7 @@
     * [Actions](resources/arcane/vouchers/actions/README.md)
       * [Properties](resources/arcane/vouchers/actions/properties.md)
       * [Tags](resources/arcane/vouchers/actions/tags.md)
+    * [Comet](resources/arcane/vouchers/comet.md)
     * [Commands](resources/arcane/vouchers/commands.md)
     * [Configuration](resources/arcane/vouchers/configuration/README.md)
       * [config.yml](resources/arcane/vouchers/configuration/config.yml.md)
