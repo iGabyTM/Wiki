@@ -20,18 +20,18 @@ Each action has its own unique identifier. The id is also case-insensitive, mean
 
 * Commands
   * [\[console\] \<command>](./#console)
-  * [\[player\] \<command>](./#player-execute-a-command-as-the-player-that-is-using-the-voucher)
+  * [\[player\] \<command>](./#player)
 * Economy
   * [\[addexp\] \<amount>(L)](./#addexp)
   * [\[item\] \<material>(:damage) \<amount> (args...)](./#item)
-  * [\[voucher\] \<name> (amount) (args...)](./#undefined)
+  * [\[voucher\] \<name> (amount) (args...)](./#voucher)
 * Message
   * [\[bossbar\] \<message>](./#bossbar)
   * [\[chat\] \<message>](./#chat)
   * [\[message\] \<message>](./#message)
 * Other
   * [\[data\] \<key> \<value>](./#data)
-  * [\[effect\] \<effect> \<duration> (amplifier)](./#effect-give-a-potion-effect-to-the-player)
+  * [\[effect\] \<effect> \<duration> (amplifier)](./#effect)
   * [\[sound\] \<sound>](./#sound)
 
 #### Actions with dependencies
@@ -260,7 +260,7 @@ Generate a random number and use it to give money and inform the player how much
 {% endtab %}
 {% endtabs %}
 
-#### \[effect] - give a potion effect to the player
+#### \[effect] - give a potion effect to the player <a href="#effect" id="effect"></a>
 
 {% tabs %}
 {% tab title="Arguments" %}
