@@ -24,13 +24,14 @@ Each action has its own unique identifier. The id is also case-insensitive, mean
 * Economy
   * [\[addexp\] \<amount>(L)](./#addexp)
   * [\[item\] \<material>(:damage) \<amount> (args...)](./#item)
+  * [\[voucher\] \<name> (amount) (args...)](./#undefined)
 * Message
   * [\[bossbar\] \<message>](./#bossbar)
   * [\[chat\] \<message>](./#chat)
   * [\[message\] \<message>](./#message)
 * Other
   * [\[data\] \<key> \<value>](./#data)
-  * \[effect] \<effect> \<duration> (amplifier)
+  * [\[effect\] \<effect> \<duration> (amplifier)](./#effect-give-a-potion-effect-to-the-player)
   * [\[sound\] \<sound>](./#sound)
 
 #### Actions with dependencies
@@ -137,6 +138,31 @@ For `name` and `lore` , if you want to use `_` and `|` you will have to escape t
 {% endtab %}
 {% endtabs %}
 
+#### \[voucher] - give vouchers to the player <a href="#voucher" id="voucher"></a>
+
+{% tabs %}
+{% tab title="Arguments" %}
+**Required**
+
+* **name**: String, the name of a voucher
+
+**Optional**
+
+* **amount**: Integer, the amount of vouchers to give (default: 1)
+* **args**: String, similar to the [give command](../commands.md#give)
+{% endtab %}
+
+{% tab title="Properties" %}
+
+{% endtab %}
+
+{% tab title="Examples" %}
+`[voucher] MoneyPouch 1` - one 'MoneyPouch' voucher
+
+`[voucher] Rank 1 VIP 7d` - one 'Rank' voucher
+{% endtab %}
+{% endtabs %}
+
 {% hint style="info" %}
 <mark style="color:blue;">**Message**</mark>
 {% endhint %}
@@ -238,7 +264,14 @@ Generate a random number and use it to give money and inform the player how much
 
 {% tabs %}
 {% tab title="Arguments" %}
+**Required**:
 
+* **effect**: String, the name of a [PotionEffectType](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html#field-summary)
+* **duration**: Ticks, the duration of the effect
+
+**Optional**:
+
+* **amplifier:** Integer, the amplifier of the effect (default: 1)
 {% endtab %}
 
 {% tab title="Properties" %}
@@ -257,7 +290,7 @@ Generate a random number and use it to give money and inform the player how much
 {% endtab %}
 
 {% tab title="Examples" %}
-d
+`{particles=false} [effect] SPEED 200 1` - Speed II for 10s with no particles
 {% endtab %}
 {% endtabs %}
 
