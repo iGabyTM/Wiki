@@ -6,7 +6,7 @@ description: >-
 
 # Tags
 
-### Chance
+### Chance <a href="#chance" id="chance"></a>
 
 Get an element from a list using a chance system (0 to 100, supporting decimals).\
 Format: `chance:{(chance)=(item),(chance)=(item),default=(default item)}`\
