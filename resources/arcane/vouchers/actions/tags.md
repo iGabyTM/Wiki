@@ -6,6 +6,18 @@ description: >-
 
 # Tags
 
+### Chance
+
+Get an element from a list using a chance system (0 to 100, supporting decimals).\
+Format: `chance:{(chance)=(item),(chance)=(item),default=(default item)}`\
+\
+Placeholders can be used for `chance` and using the `default` keyword instead of a chance, you can specify a default value for when the player is unlucky. If no default value is specified, nothing \
+will be returned.\
+\
+Examples:
+
+* `chance:{85=STONE 65,10=COAL 64,5=DIAMOND 4,default=DIRT 1}` - 85% for `STONE 64`, 10% for `COAL 64`, 5% for `DIAMOND 4` and the default value `DIRT 1`
+
 ### Math
 
 Powered by [EvalEx](https://github.com/uklimaschewski/EvalEx), the math tag allows to evaluate math equations to get the result.\
