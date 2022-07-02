@@ -235,7 +235,7 @@ Format: `PatternType;DyeColor`
 ```
 
 1. String, the name of a sound ('[namespace:path](https://minecraft.fandom.com/wiki/Resource\_location)' or just 'path' if the namespace is 'minecraft'), example: `minecraft:block.note_block.pling` or `block.note_block.pling`
-2. String, the name of a sound [Source](https://jd.adventure.kyori.net/api/4.9.3/net/kyori/adventure/sound/Sound.Source.html#enum.constant.summary), example: `MASTER`
+2. String, the name of a sound [Source](https://jd.adventure.kyori.net/api/4.11.0/net/kyori/adventure/sound/Sound.Source.html#enum.constant.summary), example: `MASTER`
 3. Float, the volume of the sound, example: `0.25`
 4. Float, the pitch of the sound, example: `1.50`
 
