@@ -6,7 +6,7 @@
 
 ## Number operations
 
-Compare two numbers using logical operators
+Compare two numbers using math operations
 
 ### Format <a href="#types-number_operations-format" id="types-number_operations-format"></a>
 
