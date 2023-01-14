@@ -16,13 +16,14 @@ settings:
 
 ## Types
 
-* Location
+* [Location](requirements.md#location)
 * [Numbers](requirements.md#numbers)
 * [Strings](requirements.md#strings)
 
 ## Location
 
-Requirements for player's current location
+Requirements for player's current location\
+**Variables**: [Location](requirements.md#variable-types-location)
 
 ### Distance <a href="#location-distance" id="location-distance"></a>
 
@@ -32,8 +33,8 @@ Check if the distance between player's location and a specific point is ≤ than
 
 ```yaml
 type: distance
-location: Location Variable # or placeholder that returns one (see 'Variable Types')
-distance: Number            # or placeholder that returns a number
+location: Location # or placeholder that returns one (see 'Variable Types')
+distance: Numbe    # or placeholder that returns a number
 ```
 
 ```yaml
@@ -168,7 +169,7 @@ right: vouchers
 
 ## Variable types
 
-### Location variable
+### Location <a href="#variable-types-location" id="variable-types-location"></a>
 
 **Format**: `world;x;y;z`\
 **Example**: `world_the_end;25;100;30` - The End 25/100/30
