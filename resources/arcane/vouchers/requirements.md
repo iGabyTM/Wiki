@@ -16,8 +16,24 @@ settings:
 
 ## Types
 
+* Location
 * [Numbers](requirements.md#numbers)
 * [Strings](requirements.md#strings)
+
+## Location
+
+Requirements for player's current location
+
+### Distance
+
+Check if the distance between player's location and a specific point is ≤ than `n`
+
+```yaml
+# The player must be close to world 25/100/200 (X/Y/Z)
+type: distance
+location: world;25;100;200
+distance: 10
+```
 
 ## Numbers
 
