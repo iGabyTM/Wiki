@@ -24,9 +24,17 @@ settings:
 
 Requirements for player's current location
 
-### Distance
+### Distance <a href="#location-distance" id="location-distance"></a>
 
 Check if the distance between player's location and a specific point is ≤ than `n`
+
+#### Format <a href="#location-distance-format" id="location-distance-format"></a>
+
+```yaml
+type: distance
+location: Location Variable # or placeholder that returns one (see 'Variable Types')
+distance: Number            # or placeholder that returns a number
+```
 
 ```yaml
 # The player must be close to world 25/100/200 (X/Y/Z)
@@ -157,6 +165,13 @@ left: ArcaneVouchers
 right: vouchers
 # Result: true, 'ArcaneVouchers' contains 'vouchers'
 ```
+
+## Variable types
+
+### Location variable
+
+**Format**: `world;x;y;z`\
+**Example**: `world_the_end;25;100;30` - The End 25/100/30
 
 ## Examples
 
