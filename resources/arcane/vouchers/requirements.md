@@ -1,5 +1,18 @@
 # Requirements
 
+## General format
+
+```yaml
+settings:
+  requirements:
+    list:
+      minimumRequirements: Integer # the minimum amount of requirements a player must pass (default: -1, all) (OPTIONAL)
+      'unique requirement name':
+        # use !<type> to negate a requirement, for example '!string equals'
+        type: String # the name of a valid requirement (see 'Types' below) (REQUIRED)
+        optiona: Boolean # whether a requirement is optional (default: false) (OPTIONAL)
+```
+
 ## Types
 
 * [Numbers](requirements.md#numbers)
