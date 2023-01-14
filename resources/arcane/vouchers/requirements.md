@@ -32,14 +32,14 @@ Check if the distance between player's location and a specific point is ≤ than
 #### Format <a href="#location-distance-format" id="location-distance-format"></a>
 
 ```yaml
-type: distance
+type: 'distance'
 location: Location # or placeholder that returns one (see 'Variable Types')
-distance: Numbe    # or placeholder that returns a number
+distance: Number   # or placeholder that returns a number
 ```
 
 ```yaml
 # The player must be close to world 25/100/200 (X/Y/Z)
-type: distance
+type: 'distance'
 location: world;25;100;200
 distance: 10
 ```
@@ -172,7 +172,7 @@ right: vouchers
 ### Location <a href="#variable-types-location" id="variable-types-location"></a>
 
 **Format**: `world;x;y;z`\
-**Example**: `world_the_end;25;100;30` - The End 25/100/30
+**Example**: `world_the_end;25;100;30` - The End at 25/100/30
 
 ## Examples
 
