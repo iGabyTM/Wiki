@@ -158,7 +158,7 @@ failActions:
 > Check if the player is the owner of the WorldGuard region he's standing in
 
 ```yaml
-left: '%worldguard_owner_name%'
+left: '%worldguard_region_owner%'
 type: string equals
 right: '%player_name%'
 failActions:
