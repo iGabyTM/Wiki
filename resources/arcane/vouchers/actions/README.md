@@ -57,10 +57,6 @@ Each action has its own unique identifier. The id is also case-insensitive, mean
 **\<command>**: String, the command to execute
 {% endtab %}
 
-{% tab title="Properties" %}
-
-{% endtab %}
-
 {% tab title="Examples" %}
 `[console] kill %player_name` - make the console run `/kill <name>`
 {% endtab %}
@@ -71,10 +67,6 @@ Each action has its own unique identifier. The id is also case-insensitive, mean
 {% tabs %}
 {% tab title="Arguments" %}
 **\<command>**: String, the command to execute (the slash is not required, unless the command has two or more)
-{% endtab %}
-
-{% tab title="Properties" %}
-
 {% endtab %}
 
 {% tab title="Examples" %}
@@ -91,10 +83,6 @@ Each action has its own unique identifier. The id is also case-insensitive, mean
 {% tabs %}
 {% tab title="Arguments" %}
 **\<amount>(L):** Integer, amount of exp to add. By appending an `L` after, levels of exp will be given instead of points
-{% endtab %}
-
-{% tab title="Properties" %}
-
 {% endtab %}
 
 {% tab title="Examples" %}
@@ -120,6 +108,7 @@ A format similar to EssentialsX's is used.
 
 * **name:** String, the name of the item, use `_` for space
 * **lore**: String, the lore of the item, use `_` for space and `|` for a new line
+* **color**: [ColorString](../configuration/vouchers.yml.md#colorstring), the color of the item, used for leather armor
 * **flags:** List, a comma separated list of [ItemFlag](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/ItemFlag.html#enum-constant-summary) names
 * **unbreakable:** make the item unbreakable, this argument doesn't require a value
 * **model**: Integer, the custom model data of this item (1.14.4+)
@@ -127,10 +116,6 @@ A format similar to EssentialsX's is used.
 
 For enchantments simply use `Enchantment:level`\
 For `name` and `lore` , if you want to use `_` and `|` you will have to escape them by adding a `\` before.
-{% endtab %}
-
-{% tab title="Properties" %}
-
 {% endtab %}
 
 {% tab title="Examples" %}
@@ -150,10 +135,6 @@ For `name` and `lore` , if you want to use `_` and `|` you will have to escape t
 
 * **amount**: Integer, the amount of vouchers to give (default: 1)
 * **args**: String, similar to the [give command](../commands.md#give)
-{% endtab %}
-
-{% tab title="Properties" %}
-
 {% endtab %}
 
 {% tab title="Examples" %}
@@ -196,10 +177,6 @@ For `name` and `lore` , if you want to use `_` and `|` you will have to escape t
 {% tabs %}
 {% tab title="Arguments" %}
 **message**: String, the message that will be sent
-{% endtab %}
-
-{% tab title="Properties" %}
-
 {% endtab %}
 
 {% tab title="Examples" %}
@@ -246,10 +223,6 @@ For `TITLE`, use `[n]` to separate the title from subtitle (`This is the title[n
 **key**: String, the key of the value, must not contain spaces
 
 **value**: Anything, the value
-{% endtab %}
-
-{% tab title="Properties" %}
-
 {% endtab %}
 
 {% tab title="Examples" %}
@@ -333,10 +306,6 @@ Generate a random number and use it to give money and inform the player how much
 **amount**: Double, the amount of money to give
 {% endtab %}
 
-{% tab title="Properties" %}
-
-{% endtab %}
-
 {% tab title="Examples" %}
 `[addmoney] 125.50`
 {% endtab %}
@@ -356,10 +325,6 @@ Generate a random number and use it to give money and inform the player how much
 **Optional**:
 
 * **world**: String, the name of the world where the permission will be added / removed (default: player's world)
-{% endtab %}
-
-{% tab title="Properties" %}
-
 {% endtab %}
 
 {% tab title="Examples" %}
