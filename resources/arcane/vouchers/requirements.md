@@ -27,7 +27,7 @@ Requirements for player's current location\
 
 ### Distance <a href="#location-distance" id="location-distance"></a>
 
-Check if the distance between player's location and a specific point is ≤ than `n`
+Check if the distance between player's location and a specific location is ≤ than `n`
 
 #### Format <a href="#location-distance-format" id="location-distance-format"></a>
 
