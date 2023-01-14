@@ -11,6 +11,7 @@ settings:
         # use !<type> to negate a requirement, for example '!string equals'
         type: String # the name of a valid requirement (see 'Types' below) (REQUIRED)
         optiona: Boolean # whether a requirement is optional (default: false) (OPTIONAL)
+        failActions: List<Action> # actions executed if the requirement fails (OPTIONAL)
 ```
 
 ## Types
