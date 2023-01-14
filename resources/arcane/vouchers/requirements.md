@@ -142,3 +142,26 @@ right: vouchers
 # Result: true, 'ArcaneVouchers' contains 'vouchers'
 ```
 
+## Examples
+
+> Check if the player has ≤ 10 HP
+
+```yaml
+# %player_health% ≤ 10
+left: '%player_health%'
+type: '<='
+right: 10
+failActions:
+  - '[message] <red>You can not use this item at full HP'
+```
+
+> Check if the player is the owner of the WorldGuard region he's standing in
+
+```yaml
+left: '%worldguard_owner_name%'
+type: string equals
+right: '%player_name%'
+failActions:
+  - '[message] <red>You can use this item only in your own protection'
+```
+
