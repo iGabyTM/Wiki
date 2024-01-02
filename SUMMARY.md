@@ -7,6 +7,7 @@
 * [☄ Arcane](resources/arcane/README.md)
   * [🎟 Vouchers](resources/arcane/vouchers/README.md)
     * [⭐ v2.0.0](resources/arcane/vouchers/v2.0.0.md)
+    * [Example vouchers](resources/arcane/vouchers/example-vouchers.md)
     * [Actions](resources/arcane/vouchers/actions/README.md)
       * [Properties](resources/arcane/vouchers/actions/properties.md)
       * [Tags](resources/arcane/vouchers/actions/tags.md)
