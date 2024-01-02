@@ -285,14 +285,16 @@ banner:
 
 <figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-#### SoundObject
+#### <mark style="color:green;">SoundObject</mark>
+
+Format:
 
 ```yaml
 <section-name>:
   sound: (1) # Required
   source: (2) # Optional | default: MASTER
-  volume: (3) # Optional | default: 1
-  pitch: (4) # Optional | default: 1
+  volume: (3) # Optional | default: 1.0
+  pitch: (4) # Optional | default: 1.0
 ```
 
 1. **sound**: String, the name of a sound ('[namespace:path](https://minecraft.fandom.com/wiki/Resource\_location)' or just 'path' for vanilla sounds from the 'minecraft' namespace), example: `minecraft:block.note_block.pling` or simply `block.note_block.pling`
@@ -300,7 +302,17 @@ banner:
 3. **volume**: Float, the volume of the sound, example: `0.25`
 4. **pitch**: Float, the pitch of the sound, example: `1.50`
 
-#### TextureString
+Example:
+
+```yaml
+sounds:
+  redeem:
+    sound: 'minecraft:block.note_block.pling'
+    volume: 0.75
+    pitch: 1.0 # Which is also the default value
+```
+
+#### <mark style="color:green;">TextureString</mark>
 
 Format: `Type;<value>` or `<value>` and BASE64 will be the default `Type`
 
